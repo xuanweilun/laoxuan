@@ -1,0 +1,36 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="base.jsp" %> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>欢迎登陆</title>
+  <link rel="stylesheet" href="pic/iconfont.css">
+  <link rel="stylesheet" href="css/login.css" type="text/css">
+  <script src="js/jquery.js"></script>
+  <script src="js/login.js"></script>
+</head>
+<body>
+  <div class="loginBox">
+     <form action="${pageContext.request.contextPath}/toLoginServlet" method="post">
+
+         <i class="iconfont icon-character human"></i>
+         <input class="text userCode" type="text" name="userCode"/><br />
+         <i class="iconfont icon-icon-- lock"></i>
+         <input class="text userPassword" type="password" name = "userPassword" />
+      <select name="userType" class="selectBox">
+     	  <option  value="">选择用户类型</option>
+     		<option  value="admin">系统管理员登陆</option>
+     		<option  value="user">用户登陆</option>
+     	</select>
+      <input class="button submit" type="submit" value="登陆" />&nbsp;&nbsp;&nbsp;&nbsp;
+      <input class="button reset" type="reset" value="重置"/>
+      <a class="a" href="${pageContext.request.contextPath}/login/userRegister.jsp">注册新的用户</a>
+     </form>
+  </div>
+    <img class="background_img1" src="pic/top.jpg" alt="背景图片显示失败">
+    <img class="background_img2" src="pic/down.jpg" alt="背景图片显示失败">
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!-- <%@page import="java.util.Iterator"%>
+<%@page import="model.Users"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="base.jsp"%> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link rel="stylesheet" href="css/adminDialog.css">
+</head>
+
+<body>
+  <img src="pic/pic.jpg" alt="加载图片失败">
+  <!-- ${requestScope.admin.adminCode} -->
+  <h2>欢迎登陆</h2>
+  <h3>删除用户</h3>
+  <form action="${pageContext.request.contextPath}/deleteUsers" method="post">
+    用户账号<input type="text" name="userCode" />
+    <input class="confirm" type="submit" value="确定"/>
+	</form>
+    <hr />
+  <table cellspacing="0" border="1" width="500px">
+    <caption>用户管理</caption>
+    <tr>
+      <th>序号</th>
+      <th>用户账号</th>
+      <th>用户密码</th>
+      <th>用户姓名</th>
+      <th>用户电话</th>
+      <th>用户地址</th>
+    </tr>
+
+    <!-- <%
+			ArrayList<Users> userss = (ArrayList<Users>)request.getAttribute("userss");
+		if(userss != null){
+			Iterator<Users> iterator = userss.iterator();
+			while (iterator.hasNext()) {
+				Users users = iterator.next();
+		%>
+		<tr align="center">
+			<td><%=users.getUserId()%></td>
+			<td><%=users.getUserCode()%></td>
+			<td><%=users.getUserPassword()%></td>
+			<td><%=users.getUserName()%></td>
+			<td><%=users.getUserTel()%></td>
+			<td><%=users.getUserAddress()%></td>
+		</tr>
+		<%
+			}
+			}
+		%> -->
+
+  </table>
+  <hr />
+
+
+</body>
+
+</html>

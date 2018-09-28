@@ -1,0 +1,28 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="base.jsp"%> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>用户注册</title>
+  <link rel="stylesheet" href="css/userRegister.css">
+</head>
+
+<body>
+  <img src="pic/pic.jpg" alt="背景图片加载失败">
+  <h2 align="center">用户注册</h2>
+  <hr />
+  <div class="userRegister">
+    <form action="${pageContext.request.contextPath}/toMyServlet" method="post">
+         <span>账号</span><input type="text" name="userCode" /><br />
+    		 <span>密码</span><input type="password" name="userPassword" /><br />
+    		 <span>确认密码</span><input type="password" /><br />
+      <input type="reset" value="重置" />
+      <input type="submit" value="注册"/>
+    	</form>
+  </div>
+
+</body>
+</html>
